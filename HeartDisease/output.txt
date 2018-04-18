@@ -1,0 +1,56 @@
+1. cleveland_data
+C:\Users\harsh\Desktop\FYP>python problem1.py
+Testing  Linear SVC values using split
+60.4395604396 %
+The prediction is as follows:																									
+ Likelihood of belonging to Class 0 is 80.198019802 %
+ Likelihood of belonging to Class 1 is 1.9801980198 %
+ Likelihood of belonging to Class 2 is 0.3300330033 %
+ Likelihood of belonging to Class 3 is 17.4917491749 %
+ Likelihood of belonging to Class 4 is 0.0 %
+Testing with RBF using split
+51.6483516484 %
+Testing using stratified with K folds
+54.2372881356 %
+
+2. data2
+C:\Users\harsh\Desktop\FYP>python problem1.py
+Testing  Linear SVC values using Split
+64.6370725855 %
+The prediction is as follows:
+ Likelihood of belonging to Class 0 is 0.0 %
+ Likelihood of belonging to Class 1 is 0.0 %
+ Likelihood of belonging to Class 2 is 100.0 %
+ Likelihood of belonging to Class 3 is 0.0 %
+ Likelihood of belonging to Class 4 is 0.0 %
+Testing with RBF using split
+64.6370725855 %
+Testing using stratified with K folds
+64.3693693694 %
+
+3. data4 
+C:\Users\harsh\Desktop\FYP>python problem1.py
+Testing Linear SVC values using Split
+63.4373125375 %
+The prediction is as follows:
+ Likelihood of belonging to Class 0 is 0.0 %
+ Likelihood of belonging to Class 1 is 0.576005760058 %
+ Likelihood of belonging to Class 2 is 99.4239942399 %
+ Likelihood of belonging to Class 3 is 0.0 %
+ Likelihood of belonging to Class 4 is 0.0 %
+Testing with RBF using split
+63.1673665267 %
+C:\Python27\lib\site-packages\sklearn\model_selection\_split.py:605: Warning: The least populated class in y has only 1 members, which is too few. The minimum number of members in any class cannot be less than n_splits=2.
+  % (min_groups, self.n_splits)), Warning)
+Testing using stratified with K folds
+62.5787862417 %
+ 
+
+4. data2
+C:\Users\harsh\Desktop\FYP>python problem2.py
+Linear SVC values with split
+76.9646070786 %
+RBF score with split
+77.0130454341 %
+Stratified K fold score
+75.7875787579 % 

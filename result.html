@@ -1,0 +1,55 @@
+<?php 
+
+$elements = $_POST['elements'];
+#echo $elements;
+$xyz= json_decode($elements);
+$str="";
+for ($i=1; $i < sizeof($xyz); $i++) {
+	$str=$str." ".$xyz[$i];
+}
+
+#echo 'test.py'.$str;
+
+$command =escapeshellcmd('test.py'.$str);
+//$command = escapeshellcmd('test.py 70 0 2 300 194 0 2 178 1 1 1 40');
+$output = shell_exec($command);
+//$output=4
+#echo $output;
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap local -->
+	<link rel="stylesheet" href="res\lib\bootstrap\4.1.0\css\bootstrap.min.css">
+	<!-- Bootstrap 4 CDN -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+</head>
+<body>
+
+	<label id="result" hidden=""><?php echo $output; ?></label>
+	<div class="container" style="margin-top: 3%">
+		<div id="resultCard" class="card mb-3" >
+		<div class="card-header">Result <?php echo "of ".$xyz[0]; ?></div>
+			<div class="card-body">
+				<h5 class="card-title">Odds of having a heart disease risk are &nbsp<?php echo $output;?>/ 4 </h5>
+				<p id="suggestion" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Local -->
+	<script type="text/javascript" src="res\lib\jquery\3.3.1\jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="res\lib\popper\1.14.3\popper.min.js"></script>
+	<script type="text/javascript" src="res\lib\bootstrap\4.1.0\js\bootstrap.min.js"></script>
+
+	<!-- CDN's -->
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+	<script type="text/javascript" src="res\js\result.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+Q.How did you make script.py
+A.We could find individual data on various resaerch sites and papers, so we found mean, sd, upper and lower value to generate 
+appropriate data.
+For finding output col, we divided by max value attainable for that col and added.subtracted based on how the are defined.
+
+
+
+1. SVM (Supoort Vector Machine)
+https://www.analyticsvidhya.com/blog/2017/09/understaing-support-vector-machine-example-code/
+
+We plot each data item as a point in n-dimensional space (where n is number of features you have) with the value of each feature being the value of a particular coordinate. Then, we perform classification by finding the hyper-plane that differentiate the two classes very well. (Linear Separability)
+
+Kernel = These are functions which takes low dimensional input space and transform it to a higher dimensional space i.e. it converts not separable problem to separable problem, these functions are called kernels.
+
+Pros:
+
+    It works really well with clear margin of separation
+    It is effective in high dimensional spaces.
+    It is effective in cases where number of dimensions is greater than the number of samples.
+    It uses a subset of training points in the decision function (called support vectors), so it is also memory efficient.
+
+Cons:
+
+    It doesn’t perform well, when we have large data set because the required training time is higher
+    It also doesn’t perform very well, when the data set has more noise i.e. target classes are overlapping
+    SVM doesn’t directly provide probability estimates, these are calculated using an expensive five-fold cross-validation. It is related SVC method of Python scikit-learn library
+
+2. PCA (Principal Component Analysis)
+https://www.analyticsvidhya.com/blog/2016/03/practical-guide-principal-component-analysis-python/
+
+PCA is used to overcome features redundancy in a data set.
+These features are low dimensional in nature.
+These features a.k.a components are a resultant of normalized linear combination of original predictor variables.
+These components aim to capture as much information as possible with high explained variance.
+The first component has the highest variance followed by second, third and so on.
+The components must be uncorrelated (remember orthogonal direction ? ). See above.
+Normalizing data becomes extremely important when the predictors are measured in different units.
+PCA works best on data set having 3 or higher dimensions. Because, with higher dimensions, it becomes increasingly difficult to make interpretations from the resultant cloud of data.
+PCA is applied on a data set with numeric variables.
+PCA is a tool which helps to produce better visualizations of high dimensional data
+
+3. Statified K-fold
+Stratification is the process of rearranging the data as to ensure each fold is a good representative of the whole. For example in a binary classification problem where each class comprises 50% of the data, it is best to arrange the data such that in every fold, each class comprises around half the instances.
