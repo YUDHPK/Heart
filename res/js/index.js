@@ -78,8 +78,8 @@ $('#modalSave').click(saveModal);
 
 function submitAdvice(z) {
 	// body...
-	alert("Vsv");
-	return false;
+	//alert("Vsv");
+	return true;
 }
 
 $("#checkButton").click(function(){
